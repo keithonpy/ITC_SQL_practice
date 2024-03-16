@@ -31,9 +31,7 @@ DROP COLUMN email;
 /*
 INSERT INTO Students(Stdno, fname, lname, Age)
 VALUES (1235, "Gsldk", "adf", 35);
-INSERT INTO Students(Stdno, fname, lname, Age)
 VALUES (1236, "dddk", "ddf", 37);
-INSERT INTO Students(Stdno, fname, lname, Age)
 VALUES (1237, "dk", "cHdek", 37);
 
 
