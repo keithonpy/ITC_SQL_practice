@@ -1,3 +1,7 @@
+##########################Practice#############################
+####link: https://learnsql.com/blog/sql-practice-exercises/####
+###############################################################
+
 # create a table distribution_companies
 create database movie;
 USE movie;
@@ -48,7 +52,76 @@ INSERT INTO movies (id, movie_title, imdb_rating, year_released, budget, box_off
 (9, 'The Lord of the Rings: The Fellowship of the Ring', 8.8, 2001, 93.00, 898.20, 6, 'English'),
 (10, 'The Good, the Bad and the Ugly', 8.8, 1966, 1.20, 38.90, 8, 'English, Italian, Spanish');
 
+select * from distribution_companies;
 
+ALTER TABLE distribution_companies ADD COLUMN id_22 INT;
+UPDATE distribution_companies SET id_22 = id * 2 WHERE id IS NOT NULL;
+select * from distribution_companies ;
+
+ALTER TABLE distribution_companies
+DROP COLUMN id_22;
+
+# Update table 
+UPDATE distribution_companies
+SET company_name = "Miramax"
+where id = 7;
+
+ALTER TABLE distribution_companies
+CHANGE COLUMN id2 person_age int;
+
+
+
+SELECT * from movies;
+
+SELECT * from movies
+ORDER BY year_released DESC;
+
+
+SELECT distribution_company_id from movies
+GROUP BY distribution_company_id;
+
+# create id 2 
+ALTER TABLE distribution_companies
+ADD COLUMN id2 int;
+
+ALTER TABLE distribution_companies
+DROP COLUMN id2;
+
+SELECT *, id *2 AS id2 from distribution_companies;
+
+UPDATE distribution_companies
+SET id2 = id * 2
+WHERE id is not NULL;
+
+ALTER TABLE movies
+ADD COLUMN distribution_company_id2 int;
+
+
+CREATE TABLE users(
+id int, username varchar(255)
+);
+
+INSERT INTO users
+VALUES 
+(1, "aaa"), 
+(2, "bbb"),
+(3, "ccc"), 
+(4, "ddd");
+
+
+SELECT * from movies;
+
+SELECT * from users u
+join movies m 
+ON u.id = m.id;
+
+
+UPDATE movies
+SET distribution_company_id2 = distribution_company_id * 2 
+where distribution_company_id is not null;
+
+
+SELECT * from distribution_companies;
 
 # Exercise 1: Select all columns from the table
 SELECT *
